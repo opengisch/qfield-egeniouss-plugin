@@ -8,7 +8,7 @@ Item {
   id: plugin
   property var positioningSettings: iface.findItemByObjectName('positioningSettings')
   property var mainWindow: iface.mainWindow()
-  property var deviceLoaderItem: iface.findItemByObjectName("positioningDeviceItem")
+  property var deviceLoaderItem: iface.findItemByObjectName('positioningDeviceDetailsLoader')
 
   function appWideEnabled() {
     positioningSettings.egenioussEnabled = true
@@ -60,7 +60,7 @@ Item {
 
       TextField {
         id: ipAddress
-        placeholderText: qsTr("Address:")
+        placeholderText: qsTr("Address")
         Layout.fillWidth: true
         font: Theme.defaultFont
         text: '127.0.0.1'
@@ -71,7 +71,7 @@ Item {
         Layout.fillWidth: true
         font: Theme.defaultFont
         text: defaultPort
-        placeholderText:  qsTr("Port:")
+        placeholderText:  qsTr("Port")
         inputMethodHints: Qt.ImhFormattedNumbersOnly
 
         readonly property string defaultPort: "1235"
